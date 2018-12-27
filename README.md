@@ -1,6 +1,6 @@
 # xrp-float
 
-A simple tool that displays the price of XRP from Bitfinex (ask price) in the top left at all times. You can right click on it to close it.
+A simple tool that displays the price of XRP from Bitfinex (ask price) in the top left at all times. You can right click to close it.
 
 It's very lightweight. Full source code included and simple Windows Installer.
 
