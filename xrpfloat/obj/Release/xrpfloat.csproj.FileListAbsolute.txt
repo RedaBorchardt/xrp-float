@@ -1,14 +1,10 @@
 C:\Users\Reda Borchardt\source\repos\xrpfloat\xrpfloat\bin\Release\xrpfloat.exe.config
 C:\Users\Reda Borchardt\source\repos\xrpfloat\xrpfloat\bin\Release\xrpfloat.exe
 C:\Users\Reda Borchardt\source\repos\xrpfloat\xrpfloat\bin\Release\xrpfloat.pdb
-C:\Users\Reda Borchardt\source\repos\xrpfloat\xrpfloat\bin\Release\Newtonsoft.Json.dll
-C:\Users\Reda Borchardt\source\repos\xrpfloat\xrpfloat\bin\Release\Newtonsoft.Json.pdb
-C:\Users\Reda Borchardt\source\repos\xrpfloat\xrpfloat\bin\Release\Newtonsoft.Json.xml
 C:\Users\Reda Borchardt\source\repos\xrpfloat\xrpfloat\obj\Release\xrpfloat.Form1.resources
 C:\Users\Reda Borchardt\source\repos\xrpfloat\xrpfloat\obj\Release\xrpfloat.Properties.Resources.resources
 C:\Users\Reda Borchardt\source\repos\xrpfloat\xrpfloat\obj\Release\xrpfloat.csproj.GenerateResource.cache
 C:\Users\Reda Borchardt\source\repos\xrpfloat\xrpfloat\obj\Release\xrpfloat.csproj.CoreCompileInputs.cache
-C:\Users\Reda Borchardt\source\repos\xrpfloat\xrpfloat\obj\Release\xrpfloat.csproj.CopyComplete
 C:\Users\Reda Borchardt\source\repos\xrpfloat\xrpfloat\obj\Release\xrpfloat.exe
 C:\Users\Reda Borchardt\source\repos\xrpfloat\xrpfloat\obj\Release\xrpfloat.pdb
 C:\Users\Reda Borchardt\source\repos\xrpfloat\xrpfloat\obj\Release\xrpfloat.csprojAssemblyReference.cache

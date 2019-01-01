@@ -1,32 +1,37 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.RegularExpressions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace xrpfloat
 {
+    
     public class TickerSearch
     {
         public static async void UpdateTicker(System.Windows.Forms.Label t)
         {
-            RootObject result = await GetTicker();
+            String result = await GetTicker();
+            MatchCollection matches = Regex.Matches(result, @"ask"":""(\d*.\d*)"",""last_price"":""(\d*.\d*)""");
+            float output = float.Parse(matches[0].Groups[1].Value);
+            float output2 = float.Parse(matches[0].Groups[2].Value);
+            System.Diagnostics.Debug.WriteLine(output2);
+
             if (result != null)
             {
-                t.Text = "XRP: " + result.ask;
-                if (float.Parse(result.last_price)-float.Parse(result.ask) < 0)
+                t.Text = "XRP: " + output;
+                
+                if (output2-output < 0)
                 {
                     t.BackColor = System.Drawing.Color.ForestGreen;
                 } else
                 {
                     t.BackColor = System.Drawing.Color.Firebrick;
                 }
+                
             }
         } 
 
-        public static async Task<RootObject> GetTicker()
+        public static async Task<String> GetTicker()
         {
             string apiUrl = "https://api.bitfinex.com/v1/pubticker/xrpusd";
 
@@ -37,8 +42,7 @@ namespace xrpfloat
                 if (response.IsSuccessStatusCode)
                 {
                     string result = await response.Content.ReadAsStringAsync();
-                    var rootResult = JsonConvert.DeserializeObject <RootObject>(result);
-                    return rootResult;
+                    return result;
                 }
                 else
                 {
