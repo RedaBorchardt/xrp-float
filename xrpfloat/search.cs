@@ -12,22 +12,26 @@ namespace xrpfloat
         {
             String result = await GetTicker();
             MatchCollection matches = Regex.Matches(result, @"ask"":""(\d*.\d*)"",""last_price"":""(\d*.\d*)""");
-            float output = float.Parse(matches[0].Groups[1].Value);
-            float output2 = float.Parse(matches[0].Groups[2].Value);
-            System.Diagnostics.Debug.WriteLine(output2);
-
-            if (result != null)
+            if (matches.Count != 0)
             {
-                t.Text = "XRP: " + output;
-                
-                if (output2-output < 0)
+                float output = float.Parse(matches[0].Groups[1].Value);
+                float output2 = float.Parse(matches[0].Groups[2].Value);
+                System.Diagnostics.Debug.WriteLine(output2);
+
+                if (result != null)
                 {
-                    t.BackColor = System.Drawing.Color.ForestGreen;
-                } else
-                {
-                    t.BackColor = System.Drawing.Color.Firebrick;
+                    t.Text = "XRP: " + output;
+
+                    if (output2 - output < 0)
+                    {
+                        t.BackColor = System.Drawing.Color.ForestGreen;
+                    }
+                    else
+                    {
+                        t.BackColor = System.Drawing.Color.Firebrick;
+                    }
+
                 }
-                
             }
         } 
 
